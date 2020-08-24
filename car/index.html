@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/commons.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="ctn">
+            <div class="ready"></div>
+            <div class="xian"></div>
+            <div class="road_end">
+                <div class="qi" data-pai="one">七</div>
+                <div class="ba" data-pai="two">八</div>
+                <div class="three" data-pai="three">亚</div>
+                <div class="liu" data-pai="four">六</div>
+                <div class="five " data-pai="five">冠</div>
+                <div class="si" data-pai="six">四</div>
+                <div class="seven " data-pai="seven">季</div>
+                <div class="wu" data-pai="eight">五</div>
+                <div class="jiu" data-pai="nine">九</div>
+            </div>
+            <div class="care car1 caranimt" id="car1">
+                <img src="images/fire_1.png" alt="拖尾" class="fire"  />
+            </div>
+            <div class="care car2 caranimt" id="car2">
+                <img src="images/fire_1.png" alt="拖尾" class="fire"  />
+            </div>
+            <div class="care car3 caranimt" id="car3">
+                <img src="images/fire_1.png" alt="拖尾" class="fire" />
+            </div>
+            <div class="care car4 caranimt" id="car4">
+                <img src="images/fire_1.png" alt="拖尾" class="fire"  />
+            </div>
+            <div class="care car5 caranimt" id="car5">
+                <img src="images/fire_1.png" alt="拖尾" class="fire"  />
+            </div>
+            <div class="care car6 caranimt" id="car6">
+                <img src="images/fire_1.png" alt="拖尾" class="fire"  />
+            </div>
+            <div class="care car7 caranimt" id="car7">
+                <img src="images/fire_1.png" alt="拖尾" class="fire"  />
+            </div>
+            <div class="care car8 caranimt" id="car8">
+                <img src="images/fire_1.png" alt="拖尾" class="fire"  />
+            </div>
+            <div class="care car9 caranimt" id="car9">
+                <img src="images/fire_1.png" alt="拖尾" class="fire"  />
+            </div>
+     
+        </div>   
+    </div>
+
+    <div class="button-main">
+        <button class="setcar" data-target="#register">设置</button>
+        <button class="start">开始</button>
+        <button class="restart">重新开始</button>
+    </div>
+
+<!-- 设置 -->
+<div class="modal " id="register">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+        <div class="modal-close" data-dismiss="modal"></div>
+        <div class="modal-header"><span class="user">赛车设置</span></div>
+        <div class="modal-body">
+            <ul class="carname">
+                <li>赛车名</li>
+                <li>设置排名</li>
+                <li>赛车速度</li>
+            </ul>
+                <div class="user-name">
+                    <span class="name11" data-car="car1">车1：</span>
+                    <div class="drop-down" data-provider="ope-dropdown">
+                        <div class="drop-text">
+                            <p class="drop-value" data-car="car1" >第7名</p>
+                            <span class="drop-icon"></span>
+                        </div>
+                        <ul class="dropdown-list" data-car="car1">
+                            <!-- <li class="dropdown-li" data-car="car1" data-number="one">第1名</li>
+                            <li class="dropdown-li" data-car="car1" data-number="two">第2名</li>
+                            <li class="dropdown-li" data-car="car1" data-number="three">第3名</li>
+                            <li class="dropdown-li" data-car="car1" data-number="four">第4名</li>
+                            <li class="dropdown-li" data-car="car1" data-number="five">第5名</li>
+                            <li class="dropdown-li" data-car="car1" data-number="six">第6名</li>
+                            <li class="dropdown-li" data-car="car1" data-number="seven">第7名</li>
+                            <li class="dropdown-li" data-car="car1" data-number="eight">第8名</li>
+                            <li class="dropdown-li" data-car="car1" data-number="nine">第9名</li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="user-name">
+                    <span class="name11 carName" data-car="car2">车2：</span>
+                    <div class="drop-down" data-provider="ope-dropdown">
+                        <div class="drop-text">
+                            <p class="drop-value" data-car="car2">第8名</p>
+                            <span class="drop-icon"></span>
+                        </div>
+                        <ul class="dropdown-list" data-car="car2">
+    
+                        </ul>
+                    </div>
+                </div>
+                <div class="user-name">
+                    <span class="name11 carName" data-car="car3">车3：</span>
+                    <div class="drop-down" data-provider="ope-dropdown">
+                        <div class="drop-text">
+                            <p class="drop-value" data-car="car3">第2名</p>
+                            <span class="drop-icon"></span>
+                        </div>
+                        <ul class="dropdown-list" data-car="car3">
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="user-name">
+                    <span class="name11 carName" data-car="car4">车4：</span>
+                    <div class="drop-down" data-provider="ope-dropdown">
+                        <div class="drop-text">
+                            <p class="drop-value" data-car="car4">第6名</p>
+                            <span class="drop-icon"></span>
+                        </div>
+                        <ul class="dropdown-list"  data-car="car4">
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="user-name">
+                    <span class="name11 carName" data-car="car5">车5：</span>
+                    <div class="drop-down" data-provider="ope-dropdown">
+                        <div class="drop-text">
+                            <p class="drop-value" data-car="car5">第1名</p>
+                            <span class="drop-icon"></span>
+                        </div>
+                        <ul class="dropdown-list" data-car="car5">
+     
+                        </ul>
+                    </div>
+                </div>
+                <div class="user-name">
+                    <span class="name11 carName" data-car="car6">车6：</span>
+                    <div class="drop-down" data-provider="ope-dropdown">
+                        <div class="drop-text">
+                            <p class="drop-value" data-car="car6">第4名</p>
+                            <span class="drop-icon"></span>
+                        </div>
+                        <ul class="dropdown-list" data-car="car6">
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="user-name">
+                    <span class="name11 carName" data-car="car7">车7：</span>
+                    <div class="drop-down" data-provider="ope-dropdown">
+                        <div class="drop-text">
+                            <p class="drop-value" data-car="car7">第3名</p>
+                            <span class="drop-icon"></span>
+                        </div>
+                        <ul class="dropdown-list" data-car="car7">
+  
+                        </ul>
+                    </div>
+                </div>
+                <div class="user-name">
+                    <span class="name11 carName" data-car="car8">车8：</span>
+                    <div class="drop-down" data-provider="ope-dropdown">
+                        <div class="drop-text">
+                            <p class="drop-value" data-car="car8">第5名</p>
+                            <span class="drop-icon"></span>
+                        </div>
+                        <ul class="dropdown-list" data-car="car8">
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="user-name">
+                    <span class="name11 carName" data-car="car9">车9：</span>
+                    <div class="drop-down" data-provider="ope-dropdown">
+                        <div class="drop-text">
+                            <p class="drop-value" data-car="car9">第9名</p>
+                            <span class="drop-icon"></span>
+                        </div>
+                        <ul class="dropdown-list" data-car="car9">
+        
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="user-btn" data-dismiss="modal" >确定</button>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/select.js"></script>
+<script src="js/carGame.js"></script>
+
+</html>

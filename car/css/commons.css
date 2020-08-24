@@ -1,0 +1,386 @@
+
+.modal {
+	position: fixed;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	visibility: hidden
+}
+
+.modal-backdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0;
+	z-index: 1;
+	-webkit-transition: opacity .3s;
+	transition: opacity .3s
+}
+
+.modal-dialog {
+	width: 455px;
+	overflow: hidden;
+	position: relative;
+	opacity: 0;
+	z-index: 2;
+	-webkit-transform: scale(.7);
+	transform: scale(.7);
+	-webkit-transition: all .3s;
+	transition: all .3s
+}
+
+.modal-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 18px;
+	height: 19px;
+	background: url(../images/modal-close.png) no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+	-webkit-transition: -webkit-transform .2s linear;
+	transition: -webkit-transform .2s linear;
+	transition: transform .2s linear;
+	transition: transform .2s linear, -webkit-transform .2s linear;
+	z-index: 6
+}
+
+.modal-close:hover {
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg)
+}
+
+.modal-header {
+	position: relative;
+	padding: 20px 0 0 38px;
+	height: 59px;
+	font-size: 12px;
+	line-height: 1;
+	color: #fff;
+	background:#3ec1fe;
+	background-size: 100% 100%;
+	border-radius: 20px 20px 0 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+.modal-header .user {
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 6px;
+	font-family: MicrosoftYaHei
+}
+
+.modal-header .line-x {
+	font-size: 14px;
+	margin: 0 13px 0 17px
+}
+
+.modal-body {
+	height: 570px;
+	padding: 10px 40px 0 40px;
+	font-size: 14px;
+	color: #b0b7bb;
+	background-color: #fff;
+	border-radius: 0 0 20px 20px
+}
+
+.modal.fade11 {
+	visibility: visible
+}
+
+.modal.fade11 .modal-backdrop {
+	opacity: .7
+}
+
+.modal.fade11 .modal-dialog {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1)
+}
+
+.modal .yes {
+	padding: 0;
+	margin: 0 0 19px 0;
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	line-height: 1;
+	letter-spacing: 4.2px;
+	text-align: left;
+	color: #606060
+}
+
+.modal .yes .dl {
+	color: #4f0390;
+	cursor: pointer
+}
+
+.modal .user-name {
+	height: 33px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 0 0 10px 0
+}
+
+
+.modal .user-name .name11 {
+	display: inline-block;
+	width: 73px;
+	line-height: 33px;
+	font-size: 16px;
+	letter-spacing: 2px;
+	text-align: left;
+	color:#606266;
+}
+
+
+.modal .code {
+	width: 94px;
+	height: 24px;
+	border: solid 1px #e3e2e2;
+	background-color: #fff;
+	outline: 0;
+	line-height: 24px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 5px 6px 0 7px;
+	text-align: center;
+}
+
+.modal .lot {
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background: url(../images/home/lot-fresh.png) no-repeat top left;
+	background-size: 100% 100%;
+	margin: 11px 0 0 0;
+}
+
+.modal .user-btn {
+	display: block;
+	width: 102px;
+	height: 33px;
+	border-radius: 33px;
+	background: transparent;
+	border: 1px solid #3ec1fe;
+	font-size: 14px;
+	line-height: 33px;
+	letter-spacing: 7px;
+	text-align: center;
+	color: #3ec1fe;
+	padding: 0;
+	cursor: pointer;
+	outline: 0;
+	margin: 50px auto 0;
+}
+
+
+.modal .user-btn a {
+	display: block;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	color: #fff
+}
+
+.modal .fot-text {
+	margin: 18px auto 0;
+	padding-bottom: 20px;
+	font-family: MicrosoftYaHei;
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 1.8px;
+	text-align: center;
+	color: #606060
+}
+
+.modal .fot-text span {
+	color: #4f0390;
+	cursor: pointer
+}
+
+.login11 {
+	visibility: hidden
+}
+
+
+
+.password.fade11 {
+	visibility: visible
+}
+
+.password.fade11 .modal-backdrop {
+	opacity: .7
+}
+
+.password.fade11 .modal-password {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1
+}
+
+.password .modal-password {
+	width: 529px;
+	height: 359px;
+	background: url(../images/home/password_bg.png) no-repeat top left;
+	background-size: 100% 100%;
+	border-radius: 20px;
+	position: relative;
+	z-index: 2;
+	opacity: 0;
+	-webkit-transform: translateY(20%);
+	transform: translateY(20%);
+	-webkit-transition: all .3s;
+	transition: all .3s
+}
+
+.password .modal-close {
+	background: url(../images/home/password_close.png) no-repeat top left;
+	background-size: 100% 100%
+}
+
+.password .header {
+	padding: 21px 0 14px 0;
+	font-family: MicrosoftYaHei;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 6px;
+	text-align: center;
+	color: #4f0390
+}
+
+.password .body {
+	width: 100%;
+	padding: 24px 0 0 0
+}
+
+.password .inpnt-group {
+	width: 185px;
+	height: 31px;
+	margin: 0 auto 37px;
+	position: relative
+}
+
+.password .inpnt-group .input {
+	width: 185px;
+	height: 31px;
+	border-radius: 3px;
+	border: solid 1px #b721ff;
+	outline: 0;
+	padding: 6px 15px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #fff
+}
+
+.password .inpnt-group .input:focus {
+	border-color: #3ec1fe
+}
+
+.password .inpnt-group .icon-pass {
+	display: block;
+	width: 26px;
+	height: 26px;
+	background: url(../images/home/modal-icon01.png) no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 3px;
+	left: -38px
+}
+
+.password .inpnt-group .error-tip {
+	width: 200px;
+	height: 16px;
+	font-family: MicrosoftYaHei;
+	font-size: 12px;
+	letter-spacing: 1.8px;
+	color: #b721ff;
+	line-height: 16px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: absolute;
+	left: 5px;
+	bottom: -24px
+}
+
+.password .inpnt-group .error-tip .icon-zh {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../images/home/error.png) no-repeat top left;
+	background-size: 100% 100%;
+	margin: 0 6px 0 0;
+	cursor: pointer
+}
+
+.password .sms {
+	width: 184px;
+	height: 30px;
+	border-radius: 10px;
+	background: url(../images/home/password_btn.png) no-repeat top left;
+	background-size: 100% 100%;
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	line-height: 30px;
+	letter-spacing: 2.8px;
+	text-align: center;
+	color: #fff;
+	margin: 0 auto;
+	cursor: pointer
+}
+
+.password .sms:hover {
+	background: url(../images/home/password_btn01.png) no-repeat top left;
+	background-size: 100% 100%
+}
+
+.password .sms-t {
+	font-family: MicrosoftYaHei;
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 1.8px;
+	text-align: center;
+	color: #878787;
+	margin: 18px 0 16px 0
+}
+
+.password .sms-text {
+	font-family: MicrosoftYaHei;
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 1.8px;
+	text-align: center;
+	color: #878787;
+	margin: 15px 0 35px 0
+}
+
+.password .bot-text {
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	line-height: 1;
+	letter-spacing: 2.1px;
+	text-align: center;
+	color: #606060
+}
+
+.password .bot-text span {
+	color: #4f0390;
+	cursor: pointer
+}

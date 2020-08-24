@@ -1,0 +1,421 @@
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,div,span,a { margin:0; padding:0; }
+a { text-decoration: none; }
+ul, ol { list-style:none; } 
+img { display: block; border:none;} 
+html,body { width: 100%;height: 100%;}
+body{
+    font-family: "Microsoft YaHei", Arial, sans-serif, Tahoma;font-size: 14px;
+}
+
+.box{
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+}
+.box::-webkit-scrollbar {
+    display: none;
+}
+.ctn{
+    width: 4000px;
+    height: 505px;
+    background: url(../images/road_bg.png) left top;
+    position: relative;
+    overflow: hidden;
+}
+.ready{
+    width: 161px;
+    height: 62px;
+    position: absolute;
+    right: 10px;
+    top: 22px;
+    background: url(../images/ready_2.png)left top no-repeat;
+    background-size: 100% 100%;
+    animation: light 0.5s linear 0s infinite;
+}
+@keyframes light{
+    0% { background: url(../images/ready_2.png)left top no-repeat; }
+    50%{ background: url(../images/ready_3.png)left top no-repeat; }
+    100% {background: url(../images/ready_1.png)left top no-repeat;}
+}
+@keyframes car1{
+    0%{
+        right: -4px;
+    }
+    100%{
+        right: 4px;
+    }
+}
+
+.red{
+    background: url(../images/ready_1.png)left top no-repeat;
+    background-size: 100% 100%; 
+}
+.green{
+    background: url(../images/ready_3.png)left top no-repeat;
+    background-size: 100% 100%; 
+}
+.yellow{
+    background: url(../images/ready_2.png)left top no-repeat;
+    background-size: 100% 100%; 
+}
+.xian{
+    width: 163px;
+    height: 392px;
+    background: url(../images/road_begin.png)left top no-repeat;
+    background-size: 100% 100%; 
+    position: absolute;
+    top: 108px;
+    right: 0;
+}
+.caranimt{
+    -webkit-animation: car1 0.3s linear infinite;
+    animation:car1 0.3s linear infinite;
+}
+.car1{
+    width: 121px;
+    height: 35px;
+    background: url(../images/car01_0.png)left top no-repeat;
+    background-size: 100% 100%; 
+    position: absolute;
+    top: 110px;
+    right: -2px;
+
+}
+.fire{
+    width: 121px;
+    height: 35px; 
+    display: none;
+}
+.sort{
+    width: 35px;
+    height: 35px;
+    background-color: bisque;
+    border-radius: 50%;
+    color: rgb(17, 17, 17);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 35px;
+    text-align: center;
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    /* display: none; */
+}
+.car2{
+    width: 121px;
+    height: 35px;
+    background: url(../images/car02_0.png)left top no-repeat;
+    background-size: 100% 100%; 
+    position: absolute;
+    top: 149px;
+    right: -2px;
+
+
+}
+.car3{
+    width: 121px;
+    height: 35px;
+    background: url(../images/car03_0.png)left top no-repeat;
+    background-size: 100% 100%; 
+    position: absolute;
+    top: 190px;
+    right: -2px;
+
+}
+.car4{
+    width: 121px;
+    height: 35px;
+    background: url(../images/car04_0.png)left top no-repeat;
+    background-size: 100% 100%; 
+    position: absolute;
+    top: 230px;
+    right: -2px;
+
+}
+.car5{
+    width: 121px;
+    height: 35px;
+    background: url(../images/car05_0.png)left top no-repeat;
+    background-size: 100% 100%; 
+    position: absolute;
+    top: 268px;
+    right: -2px;
+
+}
+.car6{
+    width: 121px;
+    height: 35px;
+    background: url(../images/car06_0.png)left top no-repeat;
+    background-size: 100% 100%; 
+    position: absolute;
+    top: 308px;
+    right: -2px;
+
+}
+.car7{
+    width: 121px;
+    height: 35px;
+    background: url(../images/car07_0.png)left top no-repeat;
+    background-size: 100% 100%; 
+    position: absolute;
+    top: 348px;
+    right: -2px;
+
+}
+.car8{
+    width: 121px;
+    height: 35px;
+    background: url(../images/car08_0.png)left top no-repeat;
+    background-size: 100% 100%; 
+    position: absolute;
+    top: 387px;
+    right: -2px;
+
+}
+.car9{
+    width: 121px;
+    height: 35px;
+    background: url(../images/car09_0.png)left top no-repeat;
+    background-size: 100% 100%; 
+    position: absolute;
+    top: 426px;
+    right: -2px;
+
+}
+
+.car10{
+    width: 121px;
+    height: 35px;
+    background: url(../images/car10_0.png)left top no-repeat;
+    background-size: 100% 100%; 
+    position: absolute;
+    top: 465px;
+    right: -2px;
+
+}
+.road_end{
+    width: 123px;
+    height: 392px;
+    background: url(../images/road_end.png)left top no-repeat;
+    background-size: 100% 100%; 
+    position: absolute;
+    top: 108px;
+    left: 0;
+}
+.road_end div{
+    width: 35px;
+    height: 35px;
+    background-color: bisque;
+    border-radius: 50%;
+    color: rgb(17, 17, 17);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 35px;
+    text-align: center;
+    display: none;
+}
+.qi{
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+.ba{
+    position: absolute;
+    right: 2px;
+    top: 41px;
+}
+.three{
+    position: absolute;
+    right: 2px;
+    top: 81px;
+}
+.liu{
+    position: absolute;
+    right: 2px;
+    top: 120px;    
+}
+ .five{
+    background-color: rgb(245, 230, 30);
+    position: absolute;
+    right: 2px;
+    top: 159px;       
+}
+.si{
+    position: absolute;
+    right: 2px;
+    top: 198px;     
+}
+.seven{
+    position: absolute;
+    right: 2px;
+    top: 238px;  
+}
+.wu{
+    position: absolute;
+    right: 2px;
+    top: 277px;    
+}
+.jiu{
+    position: absolute;
+    right: 2px;
+    top: 316px;    
+}
+.ten{
+    position: absolute;
+    right: 2px;
+    top: 355px;     
+}
+.road_end .guang{
+    background-color: rgb(245, 230, 30); 
+}
+.road_end .ya{
+    background-color: rgb(216, 216, 211);  
+}
+.road_end .ji{
+    background-color: rgb(216, 216, 211);  
+}
+
+.button-main{
+    width: 400px;
+    margin: 40px auto 0;
+    position: relative;
+}
+.setcar{
+    width: 100px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    background-color: #909399;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+.setcar:hover {
+    background: #a6a9ad;
+}
+.start{
+    width: 100px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    background-color: #909399;
+    margin: 0 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+.start:hover {
+    background: #a6a9ad;
+}
+.restart{
+    width: 100px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    background-color: #909399;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+.restart:hover {
+    background: #a6a9ad;
+}
+
+
+.carname{
+    display: flex;margin: 0 0 10px 0;
+}
+.carname li{
+    width: 80px;
+    font-size: 16px;
+}
+.carname li:nth-child(2){
+    width: 110px;
+}
+.carname li:nth-child(3){
+    width: 110px;
+}
+
+
+
+/* 下拉框 */
+.drop-down{
+    width: 110px;
+    position: relative;
+}
+.drop-down.on{
+    box-shadow: 0 0 4px rgba(62,193,254,.6);
+}
+.drop-down.on .dropdown-list{
+    display: block;
+}
+.drop-down.on .drop-icon{
+    transform: rotate(180deg);
+}
+
+.drop-text{
+    width: 100%;
+    height: 33px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: solid 1px #3ec1fe;
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+}
+
+.drop-value{
+    display: inline-block;
+    width: 80px;
+    padding-left: 5px;
+    line-height: 33px;
+    font-size: 16px;
+    color: #606266;
+}
+.drop-icon{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 6px solid;
+    border-color:  #c0c4cc transparent transparent;
+    border-bottom: 0;
+    transition: transform .15s linear;
+}
+.dropdown-list{
+    width: 110px;
+    list-style: none;
+    border: 1px solid #e0e3e6;
+    border-radius: 5px;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    max-height: 150px;
+    overflow-y: auto;
+    box-shadow: 0 0 4px rgba(176,183,187,.6);
+    display: none;
+    opacity: 0;
+    transform: scaleY(.7);
+    transform-origin: top;
+    transition: all .15s linear;
+}
+.dropdown-list.in{
+    opacity: 1;
+      transform: scaleY(1);
+}
+
+.dropdown-list li{
+    padding: 0 5px;
+    line-height: 25px;
+    cursor: pointer;
+}
+.dropdown-list li:hover{
+    background: #f0f5f8;
+}
