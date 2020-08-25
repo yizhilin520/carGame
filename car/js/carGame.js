@@ -100,21 +100,15 @@ $(function() {
 	let speed2 = 4;
 	let speed3 = 4.5;
 	let speed4 = 5;
-	let speed5 = 5.5;
 
 	//清动画
 	function clean() {
-		document.getElementById("car1").classList.remove('caranimt');
-		document.getElementById("car2").classList.remove('caranimt');
-		document.getElementById("car3").classList.remove('caranimt');
-		document.getElementById("car4").classList.remove('caranimt');
-		document.getElementById("car5").classList.remove('caranimt');
-		document.getElementById("car6").classList.remove('caranimt');
-		document.getElementById("car7").classList.remove('caranimt');
-		document.getElementById("car8").classList.remove('caranimt');
-		document.getElementById("car9").classList.remove('caranimt');
+		// document.getElementById("car1").classList.remove('caranimt');
+		let care1 = document.querySelectorAll('.care');
+		for (let e of care1) {
+			e.classList.remove('caranimt');
+		}
 	}
-	// setTimeout(clean, 1500);
 
 	//汽车动画
 	function car1Animation() {
@@ -196,7 +190,6 @@ $(function() {
 				}
 				document.getElementById(car).style.right = k2 + 'px';
 			}
-			// sort2('car3', 'three');
 
 			// 第三
 			function sort3(car, number) {
@@ -228,7 +221,6 @@ $(function() {
 
 				document.getElementById(car).style.right = k3 + 'px';
 			}
-			// sort3('car7', 'seven');
 
 			// 4名
 			function sort4(car, number) {
@@ -250,7 +242,6 @@ $(function() {
 
 				document.getElementById(car).style.right = k4 + 'px';
 			}
-			// sort4('car6', 'six');
 
 			//5名         
 			function sort5(car, number) {
@@ -328,7 +319,7 @@ $(function() {
 				} else if (k7 >= 3000 && k7 <= 3500) {
 					k7 += speed1;
 					$('#' + car).find('.fire').show();
-				}else if (k7 >= 3500) {
+				} else if (k7 >= 3500) {
 					k7 += speedzc;
 					$('#' + car).find('.fire').hide();
 				}
@@ -338,7 +329,7 @@ $(function() {
 				};
 				document.getElementById(car).style.right = k7 + 'px';
 			}
-			
+
 			//八名
 			function sort8(car, number) {
 				if (k8 < 500) {
@@ -364,7 +355,7 @@ $(function() {
 				};
 				document.getElementById(car).style.right = k8 + 'px';
 			}
-			
+
 			//9名
 			function sort9(car, number) {
 				if (k9 <= 300) {
@@ -428,12 +419,12 @@ $(function() {
 
 	let key = 1;
 	$('.start').on('click', function() {
-		if (key === 1){
+		if (key === 1) {
 			clean();
 			car1Animation();
 			key = 2;
 			$(this).text('暂停');
-		}else{
+		} else {
 			clearInterval(timer);
 			key = 1;
 			$(this).text('开始');
@@ -444,18 +435,18 @@ $(function() {
 		clearInterval(timer);
 		$box.scrollLeft(3000);
 		scrol = 2600
-		k1 = 0; 
-		k2 = 0; 
-		k3 = 0; 
-		k4 = 0; 
-		k5 = 0; 
-		k6 = 0; 
-		k7 = 0; 
-		k8 = 0; 
-		k9 = 0; 
-		
-		let care = document.querySelectorAll('.care');		
-		for (let ele of care){
+		k1 = 0;
+		k2 = 0;
+		k3 = 0;
+		k4 = 0;
+		k5 = 0;
+		k6 = 0;
+		k7 = 0;
+		k8 = 0;
+		k9 = 0;
+
+		let care = document.querySelectorAll('.care');
+		for (let ele of care) {
 			ele.style.right = 0 + 'px';
 		}
 		key = 1;
@@ -482,7 +473,6 @@ $(function() {
 			$modal.trigger('hide.modal');
 		}
 	});
-
 
 
 	let dataLi = [{
@@ -540,6 +530,7 @@ $(function() {
 
 	//设置车排名
 	let setCar, setNumber;
+
 	function downlist() {
 		$('.drop-down .dropdown-li').on('click', function() {
 			let selectedVal = $(this).text();
@@ -566,17 +557,35 @@ $(function() {
 	}
 	downlist()
 
-	$('.user-btn').on('click', function() {
-		console.log(configCar)
-		// 判断数组重复的数据
-		for (let i = 0; i < configCar.length; i++) {
-			for (let j = i + 1; j < configCar.length; j++) {
-				if (configCar[i].number == configCar[j].number) {
-					console.log(configCar[i].car)
-					alert(configCar[i].car + "排名选择重复！请重新选择")
+
+	// 判断数组重复的数据
+	function removeArray(arrayC) {
+		let titele = [];
+		for (let i = 0; i < arrayC.length; i++) {
+			for (let j = i + 1; j < arrayC.length; j++) {
+				if (arrayC[i].number == arrayC[j].number) {
+					console.log(arrayC[i].car)
+					titele.push(arrayC[i].car)
 				}
 			}
+		}
+		return titele;
 
+	}
+
+	console.log(configCar)
+	$('.user-btn').on('click', function() {
+		let remove1 = removeArray(configCar);
+		// console.log(remove1Str)
+		if (remove1.length > 0) {
+			let remove1Str = remove1.join(',');
+
+			let targetName = $(this).data('target');
+			$(targetName).addClass('fade11');
+			$(targetName).trigger('show.modal');
+			$('.text-ctn').text(remove1Str + "车的排名选择重复！请重新选择")
+		} else {
+			return false;
 		}
 	});
 
